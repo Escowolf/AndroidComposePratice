@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -11,17 +12,17 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.androidcomposepratice.ui.theme.AndroidComposePraticeTheme
 
-class TutorialJetpack : ComponentActivity() {
+class TaskManager : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -31,7 +32,11 @@ class TutorialJetpack : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Content(stringResource(R.string.title), stringResource(R.string.first_paragraph), stringResource(R.string.second_paragraph))
+                    ContentTask(
+                        phraseOne = stringResource(R.string.phrase_one), phraseTwo = stringResource(
+                            R.string.phrase_two
+                        )
+                    )
                 }
             }
         }
@@ -39,53 +44,43 @@ class TutorialJetpack : ComponentActivity() {
 }
 
 @Composable
-fun TextsPage(title: String, firstParagraph: String, secondParagraph: String, modifier: Modifier = Modifier) {
-
-    Column (modifier = modifier){
-        Text(
-            text = title,
-            fontSize = 24.sp,
-            modifier = Modifier.padding(16.dp)
-        )
-        Text(
-            text = firstParagraph,
-            textAlign = TextAlign.Justify,
-            modifier = Modifier
-                .padding(16.dp, 0.dp)
-        )
-        Text(
-            text = secondParagraph,
-            textAlign = TextAlign.Justify,
-            modifier = Modifier.padding(16.dp)
-        )
-    }
+fun ContentTaskText(phraseOne: String, phraseTwo: String) {
+    Text(
+        text = phraseOne,
+        fontWeight = FontWeight.Bold,
+        modifier = Modifier.padding(0.dp, 24.dp, 0.dp,8.dp)
+    )
+    Text(
+        text = phraseTwo,
+        fontSize = 16.sp
+    )
 }
 
 @Composable
-fun Content (title: String, firstParagraph: String, secondParagraph: String) {
-    val image = painterResource(R.drawable.bg_compose_background)
-
-    Column {
+fun ContentTask(phraseOne: String, phraseTwo: String) {
+    val image = painterResource(R.drawable.ic_task_completed)
+    Column(verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally) {
         Image(
             painter = image,
-            contentDescription = null,
-            contentScale = ContentScale.FillWidth
+            contentDescription = null
         )
-
-        TextsPage(
-            title = title,
-            firstParagraph = firstParagraph,
-            secondParagraph = secondParagraph
+        ContentTaskText(
+            phraseOne = phraseOne,
+            phraseTwo = phraseTwo
         )
     }
-
 }
+
 
 @Preview(showBackground = true)
 @Composable
-fun ContentPreview() {
+fun ContentTaskPrewview() {
     AndroidComposePraticeTheme {
-        Content(stringResource(R.string.title), stringResource(R.string.first_paragraph), stringResource(R.string.second_paragraph)
+        ContentTask(
+            phraseOne = stringResource(R.string.phrase_one), phraseTwo = stringResource(
+                R.string.phrase_two
+            )
         )
     }
 }
