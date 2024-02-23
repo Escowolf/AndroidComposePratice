@@ -62,7 +62,7 @@ fun TextsPage(title: String, first_paragraph: String, second_paragraph: String, 
 }
 
 @Composable
-fun Content (title: String, first_paragraph: String, second_paragraph: String, modifier: Modifier = Modifier) {
+fun Content (title: String, first_paragraph: String, second_paragraph: String) {
     val image = painterResource(R.drawable.bg_compose_background)
 
     Column {
