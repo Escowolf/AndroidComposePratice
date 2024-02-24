@@ -31,6 +31,9 @@
         <activity android:name=".TaskManager"
             android:exported="true"
             android:theme="@style/Theme.AndroidComposePratice"/>
+        <activity android:name=".ComposeQuadrant"
+            android:exported="true"
+            android:theme="@style/Theme.AndroidComposePratice"/>
     </application>
 
 </manifest>
