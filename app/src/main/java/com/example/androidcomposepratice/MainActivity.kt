@@ -8,7 +8,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
@@ -54,12 +56,16 @@ fun BusinessCard() {
             contentDescription = null,
             contentScale = ContentScale.Crop
         )
-
-        Greeting(
+        Column(
             modifier = Modifier
-                .padding(8.dp)
-        )
-        Contact()
+                .fillMaxSize(1f)
+        ) {
+            Greeting(
+                modifier = Modifier
+                    .padding(8.dp)
+            )
+            Contact()
+        }
 
     }
 }
@@ -71,9 +77,10 @@ fun Greeting(modifier: Modifier = Modifier) {
     val description: String = stringResource(R.string.dev_description)
 
     Column(
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Bottom,
         modifier = Modifier
-//            .fillMaxSize(1f)
+            .fillMaxWidth(1f)
+            .fillMaxHeight(0.5f)
             .padding(16.dp)
     ) {
         Image(
@@ -107,24 +114,34 @@ fun Greeting(modifier: Modifier = Modifier) {
 
 @Composable
 fun Contact(modifier: Modifier = Modifier) {
-    Column {
+    Column (
+        verticalArrangement = Arrangement.Bottom,
+        modifier = Modifier
+        .fillMaxHeight(0.5f)
+            .fillMaxWidth(1f)
+            .padding(16.dp)
+    ){
         Text(
             text = stringResource(id = R.string.phone),
             color = Color.White,
             modifier = Modifier
                 .background(color = Color.Black)
+                .align(Alignment.CenterHorizontally)
+
         )
         Text(
             text = stringResource(id = R.string.github),
             color = Color.White,
             modifier = Modifier
                 .background(color = Color.Black)
+                .align(Alignment.CenterHorizontally)
         )
         Text(
             text = stringResource(id = R.string.email),
             color = Color.White,
             modifier = Modifier
                 .background(color = Color.Black)
+                .align(Alignment.CenterHorizontally)
         )
     }
 }
