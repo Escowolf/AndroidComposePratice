@@ -1,4 +1,4 @@
-package com.example.androidcomposepratice
+package com.example.androidcomposepratice.unit1
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -19,6 +19,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.androidcomposepratice.R
 import com.example.androidcomposepratice.ui.theme.AndroidComposePraticeTheme
 
 class TutorialJetpack : ComponentActivity() {
@@ -31,7 +32,9 @@ class TutorialJetpack : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Content(stringResource(R.string.title), stringResource(R.string.first_paragraph), stringResource(R.string.second_paragraph))
+                    Content(stringResource(R.string.title), stringResource(R.string.first_paragraph), stringResource(
+                        R.string.second_paragraph
+                    ))
                 }
             }
         }
@@ -85,7 +88,9 @@ fun Content (title: String, firstParagraph: String, secondParagraph: String) {
 @Composable
 fun ContentPreview() {
     AndroidComposePraticeTheme {
-        Content(stringResource(R.string.title), stringResource(R.string.first_paragraph), stringResource(R.string.second_paragraph)
+        Content(stringResource(R.string.title), stringResource(R.string.first_paragraph), stringResource(
+            R.string.second_paragraph
+        )
         )
     }
 }

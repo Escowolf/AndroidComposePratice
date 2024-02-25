@@ -1,4 +1,4 @@
-package com.example.androidcomposepratice
+package com.example.androidcomposepratice.unit1
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
+import com.example.androidcomposepratice.R
 
 
 class HappyBirthday : ComponentActivity() {

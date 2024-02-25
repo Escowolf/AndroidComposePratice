@@ -1,4 +1,4 @@
-package com.example.androidcomposepratice
+package com.example.androidcomposepratice.unit1
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,6 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.androidcomposepratice.R
 import com.example.androidcomposepratice.ui.theme.AndroidComposePraticeTheme
 
 class TaskManager : ComponentActivity() {

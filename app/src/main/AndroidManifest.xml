@@ -22,16 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HappyBirthday"
+        <activity android:name=".unit1.HappyBirthday"
             android:exported="true"
             android:theme="@style/Theme.AndroidComposePratice"/>
-        <activity android:name=".TutorialJetpack"
+        <activity android:name=".unit1.TutorialJetpack"
             android:exported="true"
             android:theme="@style/Theme.AndroidComposePratice"/>
-        <activity android:name=".TaskManager"
+        <activity android:name=".unit1.TaskManager"
             android:exported="true"
             android:theme="@style/Theme.AndroidComposePratice"/>
-        <activity android:name=".ComposeQuadrant"
+        <activity android:name=".unit1.ComposeQuadrant"
             android:exported="true"
             android:theme="@style/Theme.AndroidComposePratice"/>
     </application>
