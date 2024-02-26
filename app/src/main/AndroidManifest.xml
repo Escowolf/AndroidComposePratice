@@ -13,6 +13,11 @@
         android:theme="@style/Theme.AndroidComposePratice"
         tools:targetApi="31">
         <activity
+            android:name=".unit2.Lemonade"
+            android:exported="true"
+            android:label="@string/title_activity_lemonade"
+            android:theme="@style/Theme.AndroidComposePratice" />
+        <activity
             android:name=".unit2.RollDice"
             android:exported="true"
             android:label="@string/title_activity_roll_dice"
