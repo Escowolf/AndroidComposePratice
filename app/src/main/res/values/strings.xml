@@ -20,4 +20,7 @@
     <string name="phone">Phone number: +55 85 9 97778823</string>
     <string name="github">github: https://github.com/Escowolf</string>
     <string name="email">email: escosou@gmail.com</string>
+    <string name="title_activity_roll_dice">RollDice</string>
+    <string name="roll">Roll</string>
+
 </resources>

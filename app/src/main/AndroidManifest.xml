@@ -13,6 +13,11 @@
         android:theme="@style/Theme.AndroidComposePratice"
         tools:targetApi="31">
         <activity
+            android:name=".unit2.RollDice"
+            android:exported="true"
+            android:label="@string/title_activity_roll_dice"
+            android:theme="@style/Theme.AndroidComposePratice" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AndroidComposePratice">
@@ -22,18 +27,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".unit1.HappyBirthday"
-            android:exported="true"
-            android:theme="@style/Theme.AndroidComposePratice"/>
-        <activity android:name=".unit1.TutorialJetpack"
-            android:exported="true"
-            android:theme="@style/Theme.AndroidComposePratice"/>
-        <activity android:name=".unit1.TaskManager"
-            android:exported="true"
-            android:theme="@style/Theme.AndroidComposePratice"/>
-        <activity android:name=".unit1.ComposeQuadrant"
-            android:exported="true"
-            android:theme="@style/Theme.AndroidComposePratice"/>
+        <activity
+            android:name=".unit1.HappyBirthday"
+            android:exported="false"
+            android:theme="@style/Theme.AndroidComposePratice" />
+        <activity
+            android:name=".unit1.TutorialJetpack"
+            android:exported="false"
+            android:theme="@style/Theme.AndroidComposePratice" />
+        <activity
+            android:name=".unit1.TaskManager"
+            android:exported="false"
+            android:theme="@style/Theme.AndroidComposePratice" />
+        <activity
+            android:name=".unit1.ComposeQuadrant"
+            android:exported="false"
+            android:theme="@style/Theme.AndroidComposePratice" />
     </application>
 
 </manifest>
